@@ -1,3 +1,16 @@
+def decode(password):  # This decode() function was created by Jaden Edgecombe
+    original = ""
+    for digit in str(password):
+        if str(int(digit) - 3) == "-1":
+            original += "9"
+        elif str(int(digit) - 3) == "-2":
+            original += "8"
+        elif str(int(digit) - 3) == "-3":
+            original += "7"
+        else:
+            original += str(int(digit) - 3)
+    return original
+
 #encode function made by Fabio Jorge Hernandez
 def encode(password):
     encodedpsw = ""
